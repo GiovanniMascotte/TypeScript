@@ -1,0 +1,14 @@
+// npm install --global yarn
+
+// yarn --version
+
+// yarn add typescript --dev
+
+// yarn tsc --init
+
+
+
+links:
+https://edca.com.br/blog/instalando-o-nodejs-e-o-yarn-em-4-passos
+
+https://www.typescriptlang.org/download/
