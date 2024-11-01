@@ -143,7 +143,13 @@ class NameNode implements ASTNode {
   }
   type = "Name";
 }
-
+class Enquanto implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "enquanto";
+}
 // parser (Analisador sintático)
 class Parser {
   private currentToken!: Token;
