@@ -143,6 +143,262 @@ class NameNode implements ASTNode {
   }
   type = "Name";
 }
+class Falso implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "falso";
+}
+
+class Nenhum implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "nenhum";
+}
+
+class Verdade implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "verdade";
+}
+
+class E implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "e";
+}
+
+class Como implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "como";
+}
+
+class Afirmar implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "afirmar";
+}
+
+class Async implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "async";
+}
+
+class Espere implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "espere";
+}
+
+class Quebrar implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "quebrar";
+}
+
+class Classe implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "classe";
+}
+
+class Continuar implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "continuar";
+}
+
+class Definicao implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "definicao";
+}
+
+class Del implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "del";
+}
+
+class Elif implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "elif";
+}
+
+class Outro implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "outro";
+}
+
+class Exceto implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "exceto";
+}
+
+class Finalmente implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "finalmente";
+}
+
+class Para implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "para";
+}
+
+class De implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "de";
+}
+
+class Global implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "global";
+}
+
+class Se implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "se";
+}
+
+class Importar implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "importar";
+}
+
+class Em implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "em";
+}
+
+class É implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "é";
+}
+
+class Lambda implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "lambda";
+}
+
+class Nonlocal implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "nonlocal";
+}
+
+class Nao implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "nao";
+}
+
+class Ou implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "ou";
+}
+
+class Passe implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "passe";
+}
+
+class Elevacao implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "elevacao";
+}
+
+class Retorne implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "retorne";
+}
+
+class Tente implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "tente";
+}
+
 class Enquanto implements ASTNode {
   id: number;
   constructor(public value: string) {
@@ -150,6 +406,23 @@ class Enquanto implements ASTNode {
   }
   type = "enquanto";
 }
+
+class Com implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "com";
+}
+
+class Colher implements ASTNode {
+  id: number;
+  constructor(public value: string) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "colher";
+}
+
 // parser (Analisador sintático)
 class Parser {
   private currentToken!: Token;
