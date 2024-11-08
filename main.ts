@@ -127,13 +127,37 @@ class BinaryOpNode implements ASTNode {
   }
   type = "BinaryOp";
 }
+// Representa uma expressão condicional (ex.: x < 10)
+class ConditionalNode implements ASTNode {
+  id: number;
+  constructor(
+    public left: ASTNode,
+    public operator: string,
+    public right: ASTNode
+  ) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "conditional";
+}
+// Representa uma estrutura condicional if (ex.: if x < 10 then ...)
+class IfNode implements ASTNode {
+  id: number;
+  constructor(
+    public condition: ASTNode,
+    public thenBranch: ASTNode,
+    public elseBranch: ASTNode | null = null
+  ) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "If";
+}
 
 class NumberNode implements ASTNode {
   id: number;
   constructor(public value: string) {
     this.id = ASTNodeCounter.getNextId();
   }
-  type = "Number";
+  type = "number";
 }
 
 class NameNode implements ASTNode {
@@ -141,7 +165,7 @@ class NameNode implements ASTNode {
   constructor(public value: string) {
     this.id = ASTNodeCounter.getNextId();
   }
-  type = "Name";
+  type = "name";
 }
 class Falso implements ASTNode {
   id: number;
@@ -552,7 +576,7 @@ try {
 
 } catch (error) {
     console.error("Erro durante a execução");
-    console.error(error.message)
+    //console.error(error.message)
 }
 
 
