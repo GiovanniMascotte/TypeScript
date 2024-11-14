@@ -12,3 +12,14 @@
 //https://edca.com.br/blog/instalando-o-nodejs-e-o-yarn-em-4-passos
 
 //https://www.typescriptlang.org/download/
+
+
+
+//no terminal:
+
+//git init 
+//git add . 
+//git commit -m "primeiro commit"
+//git branch -M main 
+//git remote add origin (junto com o link do repositório) 
+//git push -u origin main 
