@@ -566,13 +566,13 @@ try {
     const ast = parser.parse();
 
     const context = new ExecutionContext(); 
-    context.setVariable("a", 5); 
-    context.setVariable("b", 10); 
-    context.setVariable("c", 8);
+    context.setVariable("a", 123); 
+    context.setVariable("b", 19408); 
+    context.setVariable("c", 85);
     
     const result = executeAST(ast, context);
 
-    console.log(`O resultado da expressa ${input} é ${result}` );
+    console.log(`O resultado da expressao ${input} é ${result}` );
 
 } catch (error) {
     console.error("Erro durante a execução");
