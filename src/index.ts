@@ -167,6 +167,14 @@ class NameNode implements ASTNode {
   }
   type = "name";
 }
+// Representa uma atribuição de valor a uma variável (ex.: x = 5)
+export class AssignmentNode implements ASTNode {
+  id: number;
+  constructor(public name: NameNode, public value: ASTNode) {
+    this.id = ASTNodeCounter.getNextId();
+  }
+  type = "Assignment";
+}
 class Falso implements ASTNode {
   id: number;
   constructor(public value: string) {
