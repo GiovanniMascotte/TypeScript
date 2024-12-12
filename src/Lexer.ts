@@ -47,7 +47,18 @@ export class Lexer {
     const type = this.keywords[result] || TokenType.Name;
     return new Token(type, result);
   }
-
+  private comparisonOperator(): Token {
+    const operators = ["<", ">", "<=", ">=", "=="];
+    let result = "";
+    while (this.currentChar !== null && /[<>=]/.test(this.currentChar)) {
+      result += this.currentChar;
+      this.advance();
+    }
+    if (operators.includes(result)) {
+      return new Token(TokenType.ComparisonOperator, result);
+    }
+    throw new Error(`Invalid operator: ${result}`);
+  }
   public getNextToken(): Token {
     const operatorTokens: { [key: string]: TokenType } = {
       "+": TokenType.Plus,
@@ -56,17 +67,23 @@ export class Lexer {
       "/": TokenType.Divide,
       "(": TokenType.LeftParen,
       ")": TokenType.RightParen,
+      "{": TokenType.LeftBrace,
+      "}": TokenType.RightBrace,
     };
+    
     while (this.currentChar !== null) {
-      if (/\\s/.test(this.currentChar)) {
+      if (/\s/.test(this.currentChar)) {
         this.skipWhiteSpace();
         continue;
       }
-      if (/\\d/.test(this.currentChar)) {
+      if (/\d/.test(this.currentChar)) {
         return this.number();
       }
       if (/[a-zA-Z]/.test(this.currentChar)) {
         return this.name();
+      }
+      if (/[<>=]/.test(this.currentChar)) {
+        return this.comparisonOperator(); // Chama o método para operadores de comparação
       }
       if (operatorTokens[this.currentChar]) {
         const token = new Token(
@@ -78,6 +95,7 @@ export class Lexer {
       }
       throw new Error(`Invalid character: ${this.currentChar}`);
     }
+    
     return new Token(TokenType.EOF, "");
   }
 }

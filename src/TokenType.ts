@@ -14,4 +14,7 @@ export enum TokenType {
   While = "WHILE",
   Then = "THEN",
   Do = "DO",
+  LeftBrace = "LEFT_BRACE",
+  RightBrace = "RIGHT_BRACE",
+  ComparisonOperator = "COMPARISON_OPERATOR"
 }
