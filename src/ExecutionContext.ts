@@ -1,15 +1,17 @@
-
 export class ExecutionContext {
-  private variables: { [key: string]: number } = {};
+  private variables: Map<string, number>;
 
-  public setVariable(name: string, value: number) {
-    this.variables[name] = value;
+  constructor() {
+    this.variables = new Map();
   }
 
-  public getVariable(name: string): number {
-    if (!(name in this.variables)) {
-      throw new Error(`Undefined variable: ${name}`);
-    }
-    return this.variables[name];
+  // definir variavel
+  setVariable(name: string, value: number) {
+    console.log(`Definindo variável: ${name} = ${value}`);
+    this.variables.set(name, value);
+  }
+
+  getVariable(name: string): number {
+    return this.variables.get(name) || 0; // retorna 0 se nao achar a variavel
   }
 }
